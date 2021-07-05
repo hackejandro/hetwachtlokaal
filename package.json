@@ -1,0 +1,25 @@
+{
+  "name": "hetwachtlokaal",
+  "version": "1.0.0",
+  "description": "wrg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackejandro/hetwachtlokaal.git"
+  },
+  "keywords": [
+    "dfg"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hackejandro/hetwachtlokaal/issues"
+  },
+  "homepage": "https://github.com/hackejandro/hetwachtlokaal#readme",
+  "dependencies": {
+    "form-serializer": "^2.5.0"
+  }
+}
