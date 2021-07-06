@@ -1,14 +1,6 @@
 <html> 
   <head>
     <title>Hello World</title> 
-    <script
-    src="http://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
-<script type="text/javascript" src="dingetje.js"></script>
     <style>
         table, th, td {
           border: 1px solid black;
@@ -20,7 +12,7 @@
     <h1>Hello World</h1> 
 
 
-<form id='test-form'>
+<form id='foo'>
         <label for="fname">Naam:</label><br>
         <input type="text" id="fname" name="fname" value="Poepie"><br>
         <label for="lname">Telefoonnummer</label><br>
@@ -55,10 +47,13 @@
               <input type="number" id="spelt-batard" name="spelt-batard" min="1" max="5"></td>
           </tr>
       </table>
-      <input type="submit" id="submit-form" value="Bestellen">
+      <div id='success'></div>
+      <button type='submit'>Send</button>
     </form> 
     
    
   </body>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src='google-sheet.js'></script>
 </html>
