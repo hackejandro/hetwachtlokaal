@@ -1,5 +1,8 @@
+
+
 // Variable to hold request
 var request;
+
 
 // Bind to the submit event of our form
 $("#foo").submit(function(event){
@@ -29,14 +32,23 @@ $("#foo").submit(function(event){
         data: serializedData
     });
 
+
     // Callback handler that will be called on success
-    request.done(function (response, textStatus, jqXHR){
+    request.done(function (response, textStatus, jqXHR, myWindow){
+        //alert("Alert showing after AJAX call successfully");
+        //var myWindow = window.open("file2.html");
+       window.open("Thanks.html", "_self");
+        
+        
         // Log a message to the console
         console.log("Hooray, it worked!");
+        console.log(serializedData) 
         console.log(response);
         console.log(textStatus);
         console.log(jqXHR);
     });
+
+    
 
     // Callback handler that will be called on failure
     request.fail(function (jqXHR, textStatus, errorThrown){
@@ -55,5 +67,10 @@ $("#foo").submit(function(event){
     });
 
     // Prevent default posting of form
-    event.preventDefault();
-});
+ event.preventDefault();
+
+
+})
+;
+
+
