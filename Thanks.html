@@ -8,12 +8,21 @@
         //window.onload = alert(localStorage.getItem("bestellingCBatard"));
         var cBatard = localStorage.getItem("bestellingCBatard");
         var naam = localStorage.getItem("fName");
+        var sBatard = localStorage.getItem("bestellingSBatard");
+
 
         console.log(cBatard);
         document.write("Hallo" + "&#8239;" + naam + "," + "&#8239;" + "&#8239;" + "hier is je bestelling voor zaterdag:" + "</br>" + "</br>");
-
-                        document.write("Classic Batard" +":" + "&#8239;" + cBatard + "</br>");
-                    
+            
+        let cBatardWrite;
+                if (cBatard !== "0"){
+               cBatardWrite = document.write("Classic Batard" +":" + "&#8239;" + cBatard + "</br>");};
+        let sBatardWrite;
+                if (sBatard !== "0"){
+               sBatardWrite = document.write("Spelt Batard" +":" + "&#8239;" + sBatard + "</br>");};
+            
+                    //    document.write("Classic Batard" +":" + "&#8239;" + cBatard + "</br>");
+                       // document.write("Spelt Batard" +":" + "&#8239;" + sBatard + "</br>");
                      //   
                       //  document.write("<h1>Wij zetten het klaar!</h1>");
                 

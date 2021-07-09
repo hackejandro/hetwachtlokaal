@@ -5,7 +5,7 @@
         table, th, td {
           border: 1px solid black;
           font-size: 40px;}
-          button, input, select, textarea {
+          button, input, select, text, textarea {
   font-family: inherit;
   font-size: 200%;
 }
@@ -21,16 +21,16 @@
   <body> 
 
         <img src="het wachtlokaal logo.jpeg" alt="Italian Trulli">
-        <h2>Hallo dit is de webwinkel het Wachtlokaal! Help ons verspilling voorkomen en geef hier je bestelling voor aanstaande zaterdag door. 
-            We zijn zaterdag tussen 9 en 12 open voor ophalen bij het poortje op Landsmeerderdijk 193. 
+        <h2>Hallo dit is de webwinkel het Wachtlokaal!<br> <br>Help ons verspilling voorkomen en geef hier je bestelling voor aanstaande zaterdag door.<br> <br>
+            We zijn zaterdag tussen 9 en 12 open voor ophalen bij het poortje op Landsmeerderdijk 193. <br>
             Online betalingen komen er nog aan (misschien). </h2>  
 
 
 
-<form id='foo' onsubmit="return results();">
-        <label for="fname">Naam:</label><br>
+<form id='foo' onkeydown="return event.key != 'Enter';" onsubmit="return results();">
+        <label for="fname"><h1><i>Naam:</i></h1></label>
         <input type="text" size="50" id="fname" name="fname" ><br>
-        <label for="lname">Telefoonnummer</label><br>
+        <label for="lname"><h1><i>Telefoonnummer:</i></h1></label>
         <input type="tel" id="tel" name="tel" ><br><br>
     <table>
         <tr>
@@ -47,7 +47,7 @@
           <td><img src="https://www.deen.nl/content/products/2263830000000_1_680x560.jpg?width=640" alt="Girl in a jacket" style="width:500px;height:600px;">
           </td>
           <td style="text-align:center"><label for="classic-batard">Hoeveelheid:</label>
-            <input type="number" id="classic_batard" name="Classic Batard" min="1" max="999" ></td>
+            <input type="number" id="classic_batard" name="Classic Batard" value="0" min="0" max="999" ></td>
         </tr>
         <tr>
             <td><h3>Spelt Batard</h3>
@@ -57,18 +57,20 @@
             <td><img src="https://www.deen.nl/content/products/2263830000000_1_680x560.jpg?width=640" alt="Girl in a jacket" style="width:500px;height:600px;">
             </td>
             <td style="text-align:center"> <label for="spelt-batard">Hoeveelheid:</label>
-            <input type="number" id="spelt-batard" name="spelt-batard" min="1" max="999"></td>
+            <input type="number" id="spelt-batard" name="Spelt Batard" value="0" min="0" max="999"></td>
           </tr>
       </table>
-      <div class="fixed_button" id='success'>
-      <button type='submit' name="fixed_button">Send</button></div>
+      <div style="position:fixed; bottom:.5in; left:50%; right:50%;" class="fixed_button" id='success'>
+      <button type='submit' name="fixed_button">Bestel het!</button></div>
     </form>
     <script> function results(){
     var fname = document.getElementById('fname').value;
         var classic_batard = document.getElementById('classic_batard').value;
         var fname = document.getElementById('fname').value;
+        var spelt_batard = document.getElementById('spelt-batard').value;
         localStorage.setItem("bestellingCBatard",classic_batard);
         localStorage.setItem("fName",fname);
+        localStorage.setItem("bestellingSBatard",spelt_batard);
 
         console.log(classic_batard) };
     </script>
@@ -79,3 +81,5 @@
 
 
 </html>
+
+
